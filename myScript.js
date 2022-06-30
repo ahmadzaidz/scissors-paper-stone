@@ -17,13 +17,14 @@ let playerScore = 0;
 
 function game() {
   function playRound() {
-  
+  // this prompts player selection
     let playerPlay = prompt("choose scissors, paper or stone.");
     const playerSelection = playerPlay.toLowerCase();
     computerPlay();
     console.log("You chose " + playerSelection);
     console.log ("Computer chose " + computerSelection);
   
+    // this gives the result
     if (playerSelection === computerSelection) {
       console.log("It's a draw. No change to the score")
       }
@@ -36,17 +37,20 @@ function game() {
       computerScore = computerScore + 1
       console.log ("too bad, you lost. Your score is " + playerScore + "! Computer score is " + computerScore + ".")}
       };
-  for (let i = 0; i<5; i++) {
+  // this is the loop to play 5 rounds
+    for (let i = 0; i<5; i++) {
     playRound()};   
 
-  if (playerScore === computerScore) {
+  // this is the final score message
+    if (playerScore === computerScore) {
     console.log("eh draw la sia. Your score is " + playerScore + "! Computer score is " + computerScore + ".")
-  }
-  else if (playerScore > computerScore) {
+    }
+    else if (playerScore > computerScore) {
     console.log("woohoo you won! Your score is " + playerScore + "! Computer score is " + computerScore + ".")
-  }
-  else {console.log("nooo, you lost... Your score is " + playerScore + "! Computer score is " + computerScore + ".")};
-};
+    }
+    else {console.log("nooo, you lost... Your score is " + playerScore + "! Computer score is " + computerScore + ".")};
+    };
 
+//this plays the game 
 game();
 
